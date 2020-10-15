@@ -14,8 +14,10 @@ export default {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexDirection: "column",
         }}
       >
+        <p>Hover over me!</p>
         <Story />
       </div>
     ),

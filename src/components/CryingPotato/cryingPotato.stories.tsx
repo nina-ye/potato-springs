@@ -16,6 +16,7 @@ export default {
           justifyContent: "center",
         }}
       >
+        <p>Click me!</p>
         <Story />
       </div>
     ),
