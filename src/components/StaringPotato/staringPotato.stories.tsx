@@ -17,8 +17,8 @@ export default {
           flexDirection: "column",
         }}
       >
-        <p>Hover over me!</p>
         <Story />
+        <p style={{ marginTop: "-10px" }}>Hover over me!</p>
       </div>
     ),
   ],

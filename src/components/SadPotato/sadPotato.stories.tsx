@@ -1,10 +1,10 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { CryingPotato } from "./index";
+import { SadPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Crying Potato",
-  component: CryingPotato,
+  title: "Potato Spring Animations/Sad Potato",
+  component: SadPotato,
   decorators: [
     Story => (
       <div
@@ -14,16 +14,17 @@ export default {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexDirection: "column",
         }}
       >
-        <p>Click me!</p>
         <Story />
+        <p style={{ marginTop: "-10px" }}>Click me!</p>
       </div>
     ),
   ],
 } as Meta;
 
-const Template: Story = args => <CryingPotato {...args} />;
+const Template: Story = args => <SadPotato {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
