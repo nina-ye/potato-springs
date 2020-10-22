@@ -1,10 +1,10 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { SadPotato } from "./index";
+import { CreepyPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Sad Potato",
-  component: SadPotato,
+  title: "Potato Spring Animations/Creepy Potato",
+  component: CreepyPotato,
   decorators: [
     Story => (
       <div
@@ -18,12 +18,11 @@ export default {
         }}
       >
         <Story />
-        <p style={{ marginTop: "-10px" }}>Click me!</p>
       </div>
     ),
   ],
 } as Meta;
 
-const Template: Story = args => <SadPotato {...args} />;
+const Template: Story = args => <CreepyPotato {...args} />;
 
 export const Default = Template.bind({});

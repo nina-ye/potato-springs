@@ -22,3 +22,5 @@ export const StaringPotato: React.FC = () => {
     />
   );
 };
+
+export default StaringPotato;
