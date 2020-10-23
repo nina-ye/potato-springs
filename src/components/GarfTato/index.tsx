@@ -11,13 +11,16 @@ export const GarfPotato: React.FC = () => {
       })
     
     return (
+      <div className="garf-potato">
         <animated.img
         {...bind()}
         src={GarfTato}
         alt="garf potato"
+        draggable = {false}
         style={{
             transform: xy.interpolate((x, y) => `translate3d(${x}px, ${y}px, 0)`),
           }}
         />
+        </div>
       );
 };
