@@ -8,9 +8,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
+    "@types/lodash-es": "^4.17.3",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "lodash-es": "^4.17.15",
+    "lodash-move": "^1.1.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,6 +21,7 @@
     "react-spring": "^8.0.27",
     "react-use-gesture": "^7.0.16",
     "typescript": "~3.7.2",
+    "vec-la": "^1.5.0",
     "webpack": "4.43.0"
   },
   "scripts": {
