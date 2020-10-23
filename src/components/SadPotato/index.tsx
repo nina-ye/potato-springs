@@ -17,6 +17,7 @@ export const SadPotato: React.FC = () => {
         src={SadPotatoImg}
         alt="sad potato"
         onMouseLeave={() => setFadedOut(false)}
+        // @ts-ignore tis a known ts error T_T
         style={{
           opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
           transform: fadedOut
@@ -26,7 +27,7 @@ export const SadPotato: React.FC = () => {
                   output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
                 })
                 .interpolate(x => `scale(${x})`)
-            : '',
+            : "",
         }}
       />
     </div>

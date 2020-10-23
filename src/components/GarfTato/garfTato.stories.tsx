@@ -27,4 +27,3 @@ export default {
 const Template: Story = args => <GarfPotato {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
