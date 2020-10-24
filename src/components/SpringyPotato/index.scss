@@ -1,0 +1,12 @@
+.springy-potato {
+  background-image: url("../../assets/happy-potato.png");
+  background-size: 100% 100%;
+  width: 400px;
+  height: 400px;
+  cursor: -webkit-grab;
+  z-index: 1;
+}
+
+.springy-potato:active {
+  cursor: -webkit-grabbing;
+}

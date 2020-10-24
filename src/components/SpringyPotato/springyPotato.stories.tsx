@@ -1,10 +1,10 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { InvisiblePotato } from "./index";
+import { SpringyPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Invisible Potato",
-  component: InvisiblePotato,
+  title: "Potato Spring Animations/Springy Potato",
+  component: SpringyPotato,
   decorators: [
     Story => (
       <div
@@ -18,12 +18,12 @@ export default {
         }}
       >
         <Story />
-        <p style={{ marginTop: "-10px" }}>Click me!</p>
+        <p style={{ marginTop: "-10px" }}>Pinch me!</p>
       </div>
     ),
   ],
 } as Meta;
 
-const Template: Story = args => <InvisiblePotato {...args} />;
+const Template: Story = args => <SpringyPotato {...args} />;
 
 export const Default = Template.bind({});
