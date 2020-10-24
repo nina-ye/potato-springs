@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { SadPotato } from "./index";
+import { SadPotato, SadPotatoProps } from "./index";
 
 export default {
   title: "Potato Spring Animations/Sad Potato",
@@ -24,6 +24,16 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = args => <SadPotato {...args} />;
+const Template: Story<SadPotatoProps> = args => <SadPotato {...args} />;
 
 export const Default = Template.bind({});
+
+export const Slow = Template.bind({});
+Slow.args = {
+  duration: 2000,
+};
+
+export const Fast = Template.bind({});
+Fast.args = {
+  duration: 500,
+};

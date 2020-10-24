@@ -1,11 +1,18 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import SpeechlessPotatoImg from "../../assets/speechless-potato.png";
+import { Presets } from "../../types/configPresents";
 
-export const StaringPotato: React.FC = () => {
+export interface StaringPotatoProps {
+  configType?: Presets;
+}
+
+export const StaringPotato: React.FC<StaringPotatoProps> = ({
+  configType = "default",
+}) => {
   const [{ s }, set] = useSpring(() => ({
     s: 1,
-    config: { friction: 50 },
+    config: config[configType],
   }));
 
   return (

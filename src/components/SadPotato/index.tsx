@@ -3,12 +3,16 @@ import { useSpring, animated } from "react-spring";
 import SadPotatoImg from "../../assets/sad-potato.png";
 import "./index.scss";
 
-export const SadPotato: React.FC = () => {
+export interface SadPotatoProps {
+  duration?: number;
+}
+
+export const SadPotato: React.FC<SadPotatoProps> = ({ duration = 1000 }) => {
   const [fadedOut, setFadedOut] = useState(false);
 
   const { x } = useSpring({
     x: fadedOut ? 0 : 1,
-    config: { duration: 1000 },
+    config: { duration: duration },
   });
 
   return (
