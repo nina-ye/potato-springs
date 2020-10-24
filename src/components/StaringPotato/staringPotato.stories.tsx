@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { StaringPotato } from "./index";
+import { StaringPotato, StaringPotatoProps } from "./index";
 
 export default {
   title: "Potato Spring Animations/Staring Potato",
@@ -24,6 +24,34 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = args => <StaringPotato {...args} />;
+const Template: Story<StaringPotatoProps> = args => <StaringPotato {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  configType: "default",
+};
+
+export const Gentle = Template.bind({});
+Gentle.args = {
+  configType: "gentle",
+};
+
+export const Wobbly = Template.bind({});
+Wobbly.args = {
+  configType: "wobbly",
+};
+
+export const Stiff = Template.bind({});
+Stiff.args = {
+  configType: "stiff",
+};
+
+export const Slow = Template.bind({});
+Slow.args = {
+  configType: "slow",
+};
+
+export const Molasses = Template.bind({});
+Molasses.args = {
+  configType: "molasses",
+};
