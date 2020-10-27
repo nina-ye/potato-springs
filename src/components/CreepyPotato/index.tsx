@@ -39,6 +39,7 @@ export const CreepyPotato: React.FC = () => {
                 range: [0, -100, -200],
                 output: [1, 1.1, 1.2],
               })
+              // @ts-ignore
               .interpolate(x => `scale(${x})`),
           }}
         />
