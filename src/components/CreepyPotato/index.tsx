@@ -32,6 +32,7 @@ export const CreepyPotato: React.FC = () => {
         <animated.img
           src={CreepyPotatoImg}
           alt="creepy potato"
+          draggable={false}
           style={{
             transform: x
               .interpolate({
