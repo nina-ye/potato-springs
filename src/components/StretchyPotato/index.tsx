@@ -3,8 +3,25 @@ import { useSpring, animated } from "react-spring";
 import { useDrag } from "react-use-gesture";
 import "./index.scss";
 
-export const SpringyPotato: React.FC = () => {
-  const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
+export interface StretchyPotatoProps {
+  mass: number;
+  tension: number;
+  friction: number;
+}
+
+export const StretchyPotato: React.FC<StretchyPotatoProps> = ({
+  mass,
+  tension,
+  friction,
+}) => {
+  const [{ xy }, set] = useSpring(() => ({
+    xy: [0, 0],
+    config: {
+      mass: mass,
+      tension: tension,
+      friction: friction,
+    },
+  }));
   const bind = useDrag(({ down, movement }) => {
     set({ xy: down ? movement : [0, 0] });
   });
@@ -38,7 +55,7 @@ export const SpringyPotato: React.FC = () => {
   return (
     <animated.div
       {...bind()}
-      className="springy-potato"
+      className="stretchy-potato"
       style={{
         padding: xy.interpolate((x, y) => setPadding(x, y)),
         transform: xy.interpolate((x, y) => setTranslation(x, y)),
@@ -47,4 +64,4 @@ export const SpringyPotato: React.FC = () => {
   );
 };
 
-export default SpringyPotato;
+export default StretchyPotato;
