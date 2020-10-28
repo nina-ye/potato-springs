@@ -23,7 +23,7 @@ export const SproutingPotato: React.FC<SproutingPotatoProps> = ({
   });
 
   return (
-    <>
+    <div className="sprouting-potato-container">
       <img
         src={CutePotatoBaseImg}
         alt="cute potato"
@@ -38,7 +38,7 @@ export const SproutingPotato: React.FC<SproutingPotatoProps> = ({
           transform: deg.interpolate(deg => `rotateZ(${deg}deg)`),
         }}
       />
-    </>
+    </div>
   );
 };
 

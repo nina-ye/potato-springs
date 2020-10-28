@@ -1,12 +1,12 @@
-import React from 'react';
-import HappyPotato from './assets/happy-potato.png';
-import './App.css';
+import React from "react";
+import { SproutingPotato } from "./components/SproutingPotato";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={HappyPotato} className="happy-potato" alt="logo" />
+        <SproutingPotato duration={500} />
         <p>
           Run `yarn storybook` to see the different animated potato components!
         </p>
