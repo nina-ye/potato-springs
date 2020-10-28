@@ -1,22 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { SproutingPotato } from "./components/SproutingPotato";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <SproutingPotato duration={500} />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Run `yarn storybook` to see the different animated potato components!
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.react-spring.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          react-spring library
         </a>
       </header>
     </div>

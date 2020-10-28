@@ -1,0 +1,18 @@
+.sprouting-potato-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprouting-potato-base {
+  position: absolute;
+  z-index: 1;
+}
+
+.sprouting-potato-sprout {
+  position: absolute;
+  transform-origin: 45% 20%;
+}
