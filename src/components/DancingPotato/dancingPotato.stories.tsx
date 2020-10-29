@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { DancingPotato } from "./index";
+import { DancingPotato, DancingPotatoProps } from "./index";
 
 export default {
   title: "Potato Spring Animations/Dancing Potato",
@@ -24,6 +24,16 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = args => <DancingPotato {...args} />;
+const Template: Story<DancingPotatoProps> = args => <DancingPotato {...args} />;
 
 export const Default = Template.bind({});
+
+export const SideBounce = Template.bind({});
+SideBounce.args = {
+  friction: 10,
+};
+
+export const Glide = Template.bind({});
+Glide.args = {
+  friction: 100,
+};
