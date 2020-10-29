@@ -1,6 +1,6 @@
 # Potato Springs
 
-Storybook with animated potatoes to explore react-spring 🥔
+Storybook with animated potatoes to explore react-spring 🥔<br />
 View the storybook [here](https://nina-ye.github.io/potato-springs/)!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
