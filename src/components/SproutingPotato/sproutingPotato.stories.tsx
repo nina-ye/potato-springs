@@ -5,25 +5,11 @@ import { SproutingPotato, SproutingPotatoProps } from "./index";
 export default {
   title: "react-spring/Sprouting Potato",
   component: SproutingPotato,
-  decorators: [
-    Story => (
-      <div
-        style={{
-          width: "100vw",
-          height: "50vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
 } as Meta;
 
-const Template: Story<SproutingPotatoProps> = args => <SproutingPotato {...args} />;
+const Template: Story<SproutingPotatoProps> = args => (
+  <SproutingPotato {...args} />
+);
 
 export const Default = Template.bind({});
 

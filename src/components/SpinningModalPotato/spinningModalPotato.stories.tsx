@@ -25,19 +25,6 @@ const SpinningModalPotatoDemo = () => {
 export default {
   title: "Framer Motion/Spinning Modal Potato",
   component: SpinningModalPotato,
-  decorators: [
-    Story => (
-      <div
-        style={{
-          width: "100vw",
-          height: "50vw",
-          justifyContent: "center",
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
 } as Meta;
 
 const Template: Story = args => <SpinningModalPotatoDemo {...args} />;

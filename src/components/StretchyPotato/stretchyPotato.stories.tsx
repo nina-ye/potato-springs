@@ -9,8 +9,6 @@ export default {
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
