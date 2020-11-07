@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { CreepyPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Creepy Potato",
+  title: "react-spring/Creepy Potato",
   component: CreepyPotato,
   decorators: [
     Story => (

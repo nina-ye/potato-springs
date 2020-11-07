@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { RotatingPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Rotating Potato",
+  title: "react-spring/Rotating Potato",
   component: RotatingPotato,
   decorators: [
     Story => (

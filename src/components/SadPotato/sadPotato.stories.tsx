@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { SadPotato, SadPotatoProps } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Sad Potato",
+  title: "react-spring/Sad Potato",
   component: SadPotato,
   decorators: [
     Story => (

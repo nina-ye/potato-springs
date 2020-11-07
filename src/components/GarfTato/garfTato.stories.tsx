@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { GarfPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Garfield Potato",
+  title: "react-spring/Garfield Potato",
   component: GarfPotato,
   decorators: [
     Story => (

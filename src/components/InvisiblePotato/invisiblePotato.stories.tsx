@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { InvisiblePotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Invisible Potato",
+  title: "react-spring/Invisible Potato",
   component: InvisiblePotato,
   decorators: [
     Story => (
