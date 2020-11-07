@@ -1,31 +1,59 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import HappyPotatoImg from "../../assets/happy-potato.png";
 import "./index.scss";
 
-export interface ModalPotatoProps {
+export interface SpinningModalPotatoProps {
   isModalOpen: boolean;
   onCloseModal: () => void;
 }
 
-export const ModalPotato: React.FC<ModalPotatoProps> = ({
+export const SpinningModalPotato: React.FC<SpinningModalPotatoProps> = ({
   isModalOpen,
   onCloseModal,
 }) => {
-  const variants = {
-    open: { opacity: 1, y: "100px" },
-    closed: { opacity: 0, y: 0 },
+  const overlayVariant = {
+    initial: { opacity: 0 },
+    isOpen: { opacity: 1 },
+    close: { opacity: 0 },
+  };
+
+  const modalVariant = {
+    initial: { y: "-50%" },
+    isOpen: { y: "25%" },
+    close: { y: "-50%" },
+  };
+
+  const potatoVariant = {
+    initial: { rotateY: -360 },
+    isOpen: { rotateY: 360 },
+    close: { rotateY: -360 },
   };
 
   return (
-    <motion.div
-      className="modal-potato"
-      animate={isModalOpen ? "open" : "closed"}
-      variants={variants}
-      onClick={onCloseModal}
-    >
-      test
-    </motion.div>
+    <AnimatePresence>
+      {isModalOpen && (
+        <motion.div
+          className="modal-potato-overlay"
+          initial={"initial"}
+          animate={"isOpen"}
+          exit={"close"}
+          variants={overlayVariant}
+        >
+          <motion.div className="modal-potato-content" variants={modalVariant}>
+            <span className="modal-potato-x" onClick={onCloseModal}>
+              &times;
+            </span>
+            <motion.img
+              alt="spinning-potato"
+              src={HappyPotatoImg}
+              variants={potatoVariant}
+            />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
-export default ModalPotato;
+export default SpinningModalPotato;

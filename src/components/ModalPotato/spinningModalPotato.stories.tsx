@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Meta, Story } from "@storybook/react";
-import { ModalPotato } from "./index";
+import { SpinningModalPotato } from "./index";
 
-const ModalPotatoDemo = () => {
+const SpinningModalPotatoDemo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <ModalPotato
+      <SpinningModalPotato
         isModalOpen={isModalOpen}
         onCloseModal={() => setIsModalOpen(false)}
       />
       <button
         onClick={() => {
-          setIsModalOpen(!isModalOpen);
+          setIsModalOpen(true);
         }}
       >
         Click Me!
@@ -23,15 +23,14 @@ const ModalPotatoDemo = () => {
 };
 
 export default {
-  title: "Framer Motion/Modal Potato",
-  component: ModalPotato,
+  title: "Framer Motion/Spinning Modal Potato",
+  component: SpinningModalPotato,
   decorators: [
     Story => (
       <div
         style={{
           width: "100vw",
           height: "50vw",
-          display: "flex",
           justifyContent: "center",
         }}
       >
@@ -41,6 +40,6 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = args => <ModalPotatoDemo {...args} />;
+const Template: Story = args => <SpinningModalPotatoDemo {...args} />;
 
 export const Default = Template.bind({});

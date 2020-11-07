@@ -14,6 +14,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "css-loader": "^5.0.1",
     "d3-ease": "^2.0.0",
     "framer-motion": "^2.9.4",
     "lodash-es": "^4.17.15",
@@ -25,6 +26,8 @@
     "react-scripts": "3.4.3",
     "react-spring": "^9.0.0-rc.3",
     "react-use-gesture": "^7.0.16",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
     "typescript": "~3.7.2",
     "vec-la": "^1.5.0"
   },
