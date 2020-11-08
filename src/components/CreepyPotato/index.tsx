@@ -5,10 +5,13 @@ import CreepyPotatoImg from "../../assets/evil-potato.png";
 import "./index.scss";
 
 export const CreepyPotato: React.FC = () => {
-  const [{ x }, set] = useSpring(() => ({ x: 0 }));
+  const [{ x }, setX] = useSpring(() => ({ x: 0 }));
+  const { scale } = useSpring({
+    scale: x.to([0, -100, -200], [1, 1.1, 1.2]),
+  });
 
   const bind = useDrag(({ down, movement }) => {
-    set({
+    setX({
       x: down
         ? movement[0] > 0
           ? 0
@@ -20,12 +23,7 @@ export const CreepyPotato: React.FC = () => {
   });
   return (
     <animated.div className="creepy-potato-slider-container" {...bind()}>
-      <animated.div
-        className="creepy-potato-slider"
-        style={{
-          transform: x.interpolate(x => `translate3d(${x}px, 0px, 0px)`),
-        }}
-      >
+      <animated.div className="creepy-potato-slider" style={{ x }}>
         <h1>Slide me!</h1>
       </animated.div>
       <div className="creepy-potato-img-container">
@@ -33,15 +31,7 @@ export const CreepyPotato: React.FC = () => {
           src={CreepyPotatoImg}
           alt="creepy potato"
           draggable={false}
-          style={{
-            transform: x
-              .interpolate({
-                range: [0, -100, -200],
-                output: [1, 1.1, 1.2],
-              })
-              // @ts-ignore
-              .interpolate(x => `scale(${x})`),
-          }}
+          style={{ scale }}
         />
       </div>
     </animated.div>

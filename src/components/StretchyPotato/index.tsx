@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, to } from "react-spring";
 import { useDrag } from "react-use-gesture";
 import "./index.scss";
 
@@ -14,16 +14,17 @@ export const StretchyPotato: React.FC<StretchyPotatoProps> = ({
   tension,
   friction,
 }) => {
-  const [{ xy }, set] = useSpring(() => ({
-    xy: [0, 0],
+  const [{ x, y }, set] = useSpring(() => ({
+    x: 0,
+    y: 0,
     config: {
       mass: mass,
       tension: tension,
       friction: friction,
     },
   }));
-  const bind = useDrag(({ down, movement }) => {
-    set({ xy: down ? movement : [0, 0] });
+  const bind = useDrag(({ down, movement: [mx, my] }) => {
+    set({ x: down ? mx : 0, y: down ? my : 0 });
   });
 
   const setPadding = (x: number, y: number) => {
@@ -57,8 +58,8 @@ export const StretchyPotato: React.FC<StretchyPotatoProps> = ({
       {...bind()}
       className="stretchy-potato"
       style={{
-        padding: xy.interpolate((x, y) => setPadding(x, y)),
-        transform: xy.interpolate((x, y) => setTranslation(x, y)),
+        padding: to([x, y], (x, y) => setPadding(x, y)),
+        transform: to([x, y], (x, y) => setTranslation(x, y)),
       }}
     />
   );

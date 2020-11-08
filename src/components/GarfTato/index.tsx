@@ -5,9 +5,9 @@ import GarfTato from "../../assets/garftato.png";
 import "./index.scss";
 
 export const GarfPotato: React.FC = () => {
-  const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
-  const bind = useDrag(({ down, movement }) => {
-    set({ xy: down ? movement : [0, 0] });
+  const [{ x, y }, setXY] = useSpring(() => ({ x: 0, y: 0 }));
+  const bind = useDrag(({ down, movement: [mx, my] }) => {
+    setXY({ x: down ? mx : 0, y: down ? my : 0 });
   });
 
   return (
@@ -17,9 +17,7 @@ export const GarfPotato: React.FC = () => {
         src={GarfTato}
         alt="garf potato"
         draggable={false}
-        style={{
-          transform: xy.interpolate((x, y) => `translate3d(${x}px, ${y}px, 0)`),
-        }}
+        style={{ x, y }}
       />
     </div>
   );
