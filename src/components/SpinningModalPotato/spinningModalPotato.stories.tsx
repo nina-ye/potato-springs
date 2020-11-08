@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Meta, Story } from "@storybook/react";
 import { SpinningModalPotato } from "./index";
+import SproutImg from "../../assets/cute-potato-sprout.png";
 
 const SpinningModalPotatoDemo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,13 +12,31 @@ const SpinningModalPotatoDemo = () => {
         isModalOpen={isModalOpen}
         onCloseModal={() => setIsModalOpen(false)}
       />
-      <button
-        onClick={() => {
-          setIsModalOpen(true);
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        Click Me!
-      </button>
+        <img
+          style={{
+            position: "absolute",
+            marginTop: "-38px",
+            width: "200px",
+            zIndex: -1,
+          }}
+          alt="sprout"
+          src={SproutImg}
+        />
+        <button
+          onClick={() => {
+            setIsModalOpen(true);
+          }}
+        >
+          Click Me!
+        </button>
+      </div>
     </>
   );
 };
