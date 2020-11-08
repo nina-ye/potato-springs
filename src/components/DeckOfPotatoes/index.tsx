@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import HappyPotatoImg from "../../assets/happy-potato.png";
 import CoolPotatoImg from "../../assets/cool-potato.png";
 import CutePotatoImg from "../../assets/cute-potato.png";
@@ -12,13 +12,25 @@ interface PotatoCardProps {
   potatoImg: string;
   backgroundColor: string;
   constraintsRef?: React.MutableRefObject<null>;
+  reset: number;
 }
 
 const PotatoCard: React.FC<PotatoCardProps> = ({
   potatoImg,
   backgroundColor,
   constraintsRef,
+  reset,
 }) => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start(() => ({
+      x: 0,
+      y: 0,
+      transition: { duration: 0.5 },
+    }));
+  }, [reset, controls]);
+
   return (
     <motion.div
       className="potato-card"
@@ -26,13 +38,18 @@ const PotatoCard: React.FC<PotatoCardProps> = ({
       style={{ backgroundColor }}
       drag
       dragConstraints={constraintsRef}
+      animate={controls}
     >
       <img alt="potato" src={potatoImg} draggable={false} />
     </motion.div>
   );
 };
 
-export const DeckOfPotatoes: React.FC = () => {
+export interface DeckOfPotatoesProps {
+  reset: number;
+}
+
+export const DeckOfPotatoes: React.FC<DeckOfPotatoesProps> = ({ reset }) => {
   const potatoImages = [
     HappyPotatoImg,
     CoolPotatoImg,
@@ -55,9 +72,11 @@ export const DeckOfPotatoes: React.FC = () => {
 
   const Potatoes = potatoImages.map((value, index) => (
     <PotatoCard
+      key={index}
       potatoImg={value}
       backgroundColor={backgroundColors[index]}
       constraintsRef={constraintsRef}
+      reset={reset}
     />
   ));
 
