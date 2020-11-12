@@ -3,17 +3,14 @@ import { Meta, Story } from "@storybook/react";
 import { SadPotato, SadPotatoProps } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Sad Potato",
+  title: "react-spring/Sad Potato",
   component: SadPotato,
   decorators: [
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           flexDirection: "column",
         }}
       >

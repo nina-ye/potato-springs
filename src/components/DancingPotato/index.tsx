@@ -13,8 +13,8 @@ export const DancingPotato: React.FC<DancingPotatoProps> = ({
   const [didShake, setShake] = useState(false);
   const { x } = useSpring({
     from: { x: 0 },
-    to: { x: didShake ? 1 : 0 },
-    config: { mass: 1, tension: 500, friction: friction },
+    to: { x: didShake ? 50 : 0 },
+    config: { mass: 1, tension: 500, friction },
   });
 
   return (
@@ -23,15 +23,7 @@ export const DancingPotato: React.FC<DancingPotatoProps> = ({
         src={CoolPotato}
         alt="cool potato"
         draggable={false}
-        style={{
-          transform: x
-            .interpolate({
-              range: [0, 0.25, 0.5, 0.75, 1],
-              output: [0, 10, 20, 30, 40],
-            })
-            // @ts-ignore
-            .interpolate(x => `translate3d(${x}px, 0px, 0px)`),
-        }}
+        style={{ x }}
         onClick={() => setShake(!didShake)}
       />
     </div>

@@ -3,17 +3,14 @@ import { Meta, Story } from "@storybook/react";
 import { DancingPotato, DancingPotatoProps } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Dancing Potato",
+  title: "react-spring/Dancing Potato",
   component: DancingPotato,
   decorators: [
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           flexDirection: "column",
         }}
       >

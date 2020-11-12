@@ -11,14 +11,10 @@ export interface SproutingPotatoProps {
 export const SproutingPotato: React.FC<SproutingPotatoProps> = ({
   duration = 1000,
 }) => {
-  const { deg } = useSpring({
-    from: { deg: 0 },
-    to: async next => {
-      while (1) {
-        await next({ deg: 40 });
-        await next({ deg: 0 });
-      }
-    },
+  const { rotateZ } = useSpring({
+    loop: { reverse: true },
+    from: { rotateZ: 40 },
+    to: { rotateZ: 0 },
     config: { duration },
   });
 
@@ -34,9 +30,7 @@ export const SproutingPotato: React.FC<SproutingPotatoProps> = ({
         src={CutePotatoSproutImg}
         alt="sprout"
         className="sprouting-potato-sprout"
-        style={{
-          transform: deg.interpolate(deg => `rotateZ(${deg}deg)`),
-        }}
+        style={{ rotateZ }}
       />
     </div>
   );

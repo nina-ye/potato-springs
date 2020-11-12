@@ -3,17 +3,14 @@ import { Meta, Story } from "@storybook/react";
 import { RotatingPotato } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Rotating Potato",
+  title: "react-spring/Rotating Potato",
   component: RotatingPotato,
   decorators: [
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           flexDirection: "column",
         }}
       >

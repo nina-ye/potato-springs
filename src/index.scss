@@ -1,0 +1,28 @@
+@import url(//fonts.googleapis.com/css?family=Delius);
+
+body {
+  margin: 0;
+  font-family: "Delius", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  background-color: antiquewhite;
+  cursor: pointer;
+  border-color: tan;
+  font-family: "Delius", sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border-style: solid;
+}
+
+button:hover {
+  background: tan;
+}

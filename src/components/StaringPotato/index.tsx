@@ -10,8 +10,8 @@ export interface StaringPotatoProps {
 export const StaringPotato: React.FC<StaringPotatoProps> = ({
   configType = "default",
 }) => {
-  const [{ s }, set] = useSpring(() => ({
-    s: 1,
+  const [{ scale }, setScale] = useSpring(() => ({
+    scale: 1,
     config: config[configType],
   }));
 
@@ -19,9 +19,9 @@ export const StaringPotato: React.FC<StaringPotatoProps> = ({
     <animated.img
       src={SpeechlessPotatoImg}
       alt="staring potato"
-      onMouseMove={() => set({ s: 3 })}
-      onMouseLeave={() => set({ s: 1 })}
-      style={{ transform: s.interpolate(s => `scale(${s})`) }}
+      onMouseMove={() => setScale({ scale: 3 })}
+      onMouseLeave={() => setScale({ scale: 1 })}
+      style={{ scale }}
     />
   );
 };

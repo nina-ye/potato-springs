@@ -3,14 +3,12 @@ import { Meta, Story } from "@storybook/react";
 import { StretchyPotato, StretchyPotatoProps } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Stretchy Potato",
+  title: "react-spring/Stretchy Potato",
   component: StretchyPotato,
   decorators: [
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

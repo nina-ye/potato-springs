@@ -1,6 +1,7 @@
 # Potato Springs
 
-Storybook with animated potatoes to explore react-spring 🥔<br />
+Storybook with animated potatoes to explore different spring animation libraries 🥔<br />
+Currently includes examples with react-spring and Framer Motion<br/>
 View the storybook [here](https://nina-ye.github.io/potato-springs/)!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -17,8 +18,6 @@ Installs all dependencies<br />
 
 Runs storybook so you can see all the cool potato components 😎<br />
 Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
-
-The page will reload if you make edits.<br />
 
 ## Learn More
 

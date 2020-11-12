@@ -3,17 +3,14 @@ import { Meta, Story } from "@storybook/react";
 import { StaringPotato, StaringPotatoProps } from "./index";
 
 export default {
-  title: "Potato Spring Animations/Staring Potato",
+  title: "react-spring/Staring Potato",
   component: StaringPotato,
   decorators: [
     Story => (
       <div
         style={{
-          width: "100vw",
-          height: "50vw",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           flexDirection: "column",
         }}
       >

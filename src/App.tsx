@@ -1,6 +1,6 @@
 import React from "react";
 import { SproutingPotato } from "./components/SproutingPotato";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
