@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.9ba151ec.chunk.css",
+    "main.js": "./main.321d3f2e54fc81d76ddc.bundle.js",
+    "main.css.map": "./static/css/main.9ba151ec.chunk.css.map",
+    "main.js.map": "./main.321d3f2e54fc81d76ddc.bundle.js.map",
+    "runtime~main.js": "./runtime~main.321d3f2e54fc81d76ddc.bundle.js",
+    "runtime~main.js.map": "./runtime~main.321d3f2e54fc81d76ddc.bundle.js.map",
+    "vendors~main.js": "./vendors~main.321d3f2e54fc81d76ddc.bundle.js",
+    "vendors~main.js.map": "./vendors~main.321d3f2e54fc81d76ddc.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.847d5fbdec6de40015fb3846c3a4ae99.js": "./precache-manifest.847d5fbdec6de40015fb3846c3a4ae99.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/cool-potato.png": "./static/media/cool-potato.bc210451.png",
+    "static/media/cute-potato-base.png": "./static/media/cute-potato-base.7e74340e.png",
+    "static/media/cute-potato.png": "./static/media/cute-potato.0e3d2730.png",
+    "static/media/evil-potato.png": "./static/media/evil-potato.08c14002.png",
+    "static/media/garftato.png": "./static/media/garftato.530955bb.png",
+    "static/media/index.scss": "./static/media/happy-potato-2.e6f2f8d4.png",
+    "static/media/happy-potato.png": "./static/media/happy-potato.cb02ccdb.png",
+    "static/media/sad-potato.png": "./static/media/sad-potato.05f957cf.png",
+    "static/media/speechless-potato.png": "./static/media/speechless-potato.71f4df4a.png",
+    "vendors~main.321d3f2e54fc81d76ddc.bundle.js.LICENSE.txt": "./vendors~main.321d3f2e54fc81d76ddc.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.321d3f2e54fc81d76ddc.bundle.js",
+    "vendors~main.321d3f2e54fc81d76ddc.bundle.js",
+    "static/css/main.9ba151ec.chunk.css",
+    "main.321d3f2e54fc81d76ddc.bundle.js"
+  ]
+}
